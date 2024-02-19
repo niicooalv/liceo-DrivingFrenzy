@@ -111,10 +111,10 @@ public class ControlCenter {
 				nextComment("\t" + action);
 				nextComment("\tPasa la sección en " + secondsThisSection + " segundos." );
 				totalTime += secondsThisSection;
-				nextComment("\tSu tiempo total tras el tramo " + currentSectionPosition + " es de " + totalTime + " segundos");
+				nextComment("\tSu tiempo total tras el tramo " + currentSectionPosition + " es de " + timeTo2Decimals(totalTime) + " segundos");
 				currentSectionPosition++;
 			}
-			nextComment("\tFinaliza el recorrido! Su tiempo total es de " + totalTime + " segundos.");
+			nextComment("\tFinaliza el recorrido! Su tiempo total es de " + timeTo2Decimals(totalTime) + " segundos.");
 			times[i] = totalTime;
 		}
 		
@@ -122,14 +122,18 @@ public class ControlCenter {
 		nextComment("Y acaba la carrera! Los tiempos de los pilotos son: ");
 		for (int i=0; i<vehicles.length;i++) {
 			Vehicle vehicle = vehicles[i];
-			nextComment("\t" + vehicle.getDriver() + " con el número " + vehicle.getNumber() + " ha hecho un tiempo de " + times[i] + " segundos.");
+			nextComment("\t" + vehicle.getDriver() + " con el número " + vehicle.getNumber() + " ha hecho un tiempo de " + timeTo2Decimals(times[i]) + " segundos.");
 		}
 		
 	}
 
+	private static String timeTo2Decimals(double time) {
+		return 0.01 * Math.round(time*100)+"";
+	}
+	
 	public static void main(String[] args) throws IOException {
 		System.out.println(USAGE);
-		simpleRandomRace(5, 10, 2, 5, 40, 100, 500, 2000, 20, 100);
+		simpleRandomRace(50, 100, 2, 5, 40, 150, 500, 2000, 70, 150);
 	}
 
 	/*
