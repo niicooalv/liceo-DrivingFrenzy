@@ -1,7 +1,5 @@
 package drivingFrenzy.race;
 
-import java.util.List;
-
 public class Track {
 	private final Section[] sections;
 
