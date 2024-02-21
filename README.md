@@ -80,9 +80,9 @@ The assignment is self-driven and self-paced.
   - Don´t implement this directly in all of the vehicles. Find a way to implement it just once (inheritance). Also, make the code less redundant - likely, Scooter and Kart have attributes and methods in common.
 - Automate the creation of a long track - at least, 50 kilometers with 5 sections. It must be random, and combine different types of sections.
 > The code will be reviewed. Questions about the code will be asked randomly to the students. 
-- Modify the sections so they provide extra information for the drivers. A section will offer a method "getVariationLevel" which will be -1 if somehow it is impaired and vehicles should go slower, 0 if standard, or 1 if vehicles can go faster. Do not provide the exact modifier that is being applied... 
+- Modify the sections so they provide extra information for the drivers. A section will offer a method `getVariationLevel` which will be -1 if somehow it is impaired and vehicles should go slower, 0 if standard, or 1 if vehicles can go faster. Do not provide the exact modifier that is being applied... 
   - Do it similar to the last vehicles change. 
-- Implement a new type of vehicles with 6 gears, normal cars. Also, these cars receive the prediction of the main climate. 
+- Implement a new type of vehicles with 6 gears, normal cars. Also, these cars are allowed to use the information of `getVariationLevel`.
     - Implement the ``adaptSpeed`` method similar to the one in the Karts. However, the vehicle has a new attribute `driverStyle` which can be standard, aggressive or conservative. 
         - An aggressive driver will try to play with the odds to go faster than the theoretical max speed. For instance, on a Sunny day, it may decide to go over the max speed limit more often (also, it decides how much it will go over the speed limit). 
         - A conservative driver will always try to prevent getting out of the track.    
