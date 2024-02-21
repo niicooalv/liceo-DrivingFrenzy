@@ -67,7 +67,8 @@ The assignment is self-driven and self-paced.
     - Choose 3 real one-gear Scooters and 3 real 2-gear Karts to get actual statistics on speed - don't spend more than 10 minutes searching, otherwise, just make up the numbers.
 - Create a new type of ``Section`` called ``StandardOutsideSection``. This one has its theoretical max speed, but also the actual one. The actual one is just a percentage of the theoretical one. 
     - For instance, think of a rainy day. Actual max speed could be ``0.7 * maxSpeed``. Or, think of a very sunny day; the actual max speed could be ``1.1 * maxSpeed``.
-> The code will be reviewed. Questions about the code will be asked randomly to the students. 
+    - This is not randomized. When creating the Object, the percentage must be provided and also a proper description. 
+> The code will be reviewed. Questions about the code will be asked randomly to the students.
 - **From this point on, you can modify the start method as needed.**
 - Modify the ``start`` method: if a vehicle goes over the actual max speed of a section, it goes out of the track and gets disqualified.
 - When listing the positions, you must also show the disqualified vehicles and in which section they were disqualified.
