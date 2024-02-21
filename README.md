@@ -77,7 +77,7 @@ The assignment is self-driven and self-paced.
 
 ### Final steps 
 - Implement some randomization to the speed of the vehicles to simulate that the drivers sometimes make mistakes. When adapting the speed, all of the vehicles add a random factor to the speed by multiplying it by a random number between 0.8 and 1.0.
-  - Don´t implement this directly in all of the vehicles. Find a way to implement it just once (inheritance). 
+  - Don´t implement this directly in all of the vehicles. Find a way to implement it just once (inheritance). Also, make the code less redundant - likely, Scooter and Kart have attributes and methods in common.
 - Automate the creation of a long track - at least, 50 kilometers with 5 sections. It must be random, and combine different types of sections.
 > The code will be reviewed. Questions about the code will be asked randomly to the students. 
 - Modify the sections so they provide extra information for the drivers. A section will offer a method "getVariationLevel" which will be -1 if somehow it is impaired and vehicles should go slower, 0 if standard, or 1 if vehicles can go faster. Do not provide the exact modifier that is being applied... 
