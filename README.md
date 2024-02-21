@@ -72,6 +72,7 @@ The assignment is self-driven and self-paced.
 - **From this point on, you can modify the start method as needed.**
 - Modify the ``start`` method: if a vehicle goes over the actual max speed of a section, it goes out of the track and gets disqualified.
 - When listing the positions, you must also show the disqualified vehicles and in which section they were disqualified.
+- Run a new Scooters + Karts race, but with both indoor and outdoor sections. 
 > The code will be reviewed. Questions about the code will be asked randomly to the students. 
 
 ### Final steps 
