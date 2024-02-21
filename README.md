@@ -80,12 +80,8 @@ The assignment is self-driven and self-paced.
   - Don´t implement this directly in all of the vehicles. Find a way to implement it just once (inheritance). 
 - Automate the creation of a long track - at least, 50 kilometers with 5 sections. It must be random, and combine different types of sections.
 > The code will be reviewed. Questions about the code will be asked randomly to the students. 
-- Create a new type of section, ``VariableClimateSection``. 
-    - The oddity of this section is that the actual speed is randomized. For instance, a specific section may apply a 1.1 multiplier for a car, or a 0.9 for a different car (it represents a different time of the day).
-        - The multiplier must be between 1.2 and 0.8. 
-    - At the start of the race, randomly select a main climate: Sunny or Rainy. 
-        - If Sunny, there are more chances per section of getting a large (>1) multiplier - 80 vs 20. If Rainy, there are more chances of getting a small multiplier.
-    - When getting the actual max speed of the section, the Control Center takes it into account to print if it was dry or wet.
+- Modify the sections so they provide extra information for the drivers. A section will offer a method "getVariationLevel" which will be -1 if somehow it is impaired and vehicles should go slower, 0 if standard, or 1 if vehicles can go faster. Do not provide the exact modifier that is being applied... 
+  - Do it similar to the last vehicles change. 
 - Implement a new type of vehicles with 6 gears, normal cars. Also, these cars receive the prediction of the main climate. 
     - Implement the ``adaptSpeed`` method similar to the one in the Karts. However, the vehicle has a new attribute `driverStyle` which can be standard, aggressive or conservative. 
         - An aggressive driver will try to play with the odds to go faster than the theoretical max speed. For instance, on a Sunny day, it may decide to go over the max speed limit more often (also, it decides how much it will go over the speed limit). 
