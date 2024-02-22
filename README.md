@@ -84,8 +84,8 @@ The assignment is self-driven and self-paced.
   - Do it similar to the last vehicles change. 
 - Implement a new type of vehicles with 6 gears, normal cars. Also, these cars are allowed to use the information of `getVariationLevel`.
     - Implement the ``adaptSpeed`` method similar to the one in the Karts. However, the vehicle has a new attribute `driverStyle` which can be standard, aggressive or conservative. 
-        - An aggressive driver will try to play with the odds to go faster than the theoretical max speed. For instance, on a Sunny day, it may decide to go over the max speed limit more often (also, it decides how much it will go over the speed limit). 
+        - An aggressive driver will try to play with the odds to go faster than the theoretical max speed. For instance, if the variation level is positive, it will be aggressive, if it is 0 it will still be aggressive to compensate for the its own randomization speed (see point 1). 
         - A conservative driver will always try to prevent getting out of the track.    
-        - A standard driver will be conservative on rainy days, aggressive on sunny days.
+        - A standard driver will have an average behavior. 
 > The code will be reviewed. Questions about the code will be asked randomly to the students.
 - Modify the full code so the vehicles compete simultaneously, and add commentator mentions about when a car overtakes another one, etc. Make it real! 
