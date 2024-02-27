@@ -35,7 +35,7 @@ The assignment follows; **the code must be properly commented**.
 ## Setup and Evaluation
 The assignment is self-driven and self-paced. 
 - Each student will be assigned to a random group, each group will have 3 students.
-- Only one laptop is allowed per group. Students will take turns to be completing the assignment. This is an adaptation of [Pair programming](https://www.codementor.io/pair-programming).
+- Only one laptop is allowed per group. Students will take turns to complete the assignmenttogether. This is an adaptation of [Pair programming](https://www.codementor.io/pair-programming).
 - The steps of the assignment are sequential.
 - At certain points the students will be questioned to evaluate the job done so far.
 > These checkpoints are quoted as this line.
@@ -46,7 +46,7 @@ The assignment is self-driven and self-paced.
 
 - Run the application several times as it is and try to follow the code, to understand how it works.
 - Create a UML Class diagram of the current project. Be specific about the visibility of methods and variables.
-> The diagrams will be reviewed and evaluated. All of the members of the group must explain it the portion they are asked for.
+> The diagrams will be reviewed and evaluated. All of the members of the group must explain the portion they are asked for.
 - Create a method called ``defaultRace`` in the `ControlCenter`. This is a simpler version of the ``simpleRandomRace`` method, but in this case everything is predefined (not randomized): 
     - We have a track with 5 sections of 1000, 2000, 3000, 2000 and 1000 meters of length; you can choose the max speed.
     - We have just 3 vehicles, they will be Scooters. Give the vehicles proper descriptions and drivers. 
