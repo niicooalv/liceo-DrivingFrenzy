@@ -8,7 +8,6 @@ import drivingFrenzy.race.StandardIndoorSection;
 import drivingFrenzy.race.Track;
 import drivingFrenzy.vehicles.Scooter;
 import drivingFrenzy.vehicles.Vehicle;
-/** prueba **/
 /**
  * @author ismael This is the Control Center. It is the entry point of the
  *         application, where the races are created, vehicles are added...
@@ -68,7 +67,26 @@ public class ControlCenter {
 		
 		start(track, vehicles);
 	}
-	
+	//Crear una carrera por defecto
+	public static void defaultRace() throws IOException {
+
+		//Crear las secciones
+		Section[] sections = new Section[3];
+		sections[0] = new StandardIndoorSection(100, "una recta sencilla", 100);
+		sections[1] = new StandardIndoorSection(100, "la recta 2", 100);
+		sections[2] = new StandardIndoorSection(100, "la recta 3", 100);
+		Track track = new Track(sections);
+		// Craer los vehiculos
+		Vehicle[] vehicles = new Vehicle[3];
+		vehicles[0] = new Scooter(1, "Alonso", 0, 50, "scooter");
+		vehicles[1] = new Scooter(2, "Max", 0, 100, "scooter");
+		vehicles[2] = new Scooter(3, "Carlos", 0, 150, "scooter");
+
+		start(track, vehicles);
+
+
+
+	}
 	/**
 	 * This method receives a track and a list of cars and it starts a race, showing the results in command line. 
 	 * @throws IOException 
@@ -133,7 +151,8 @@ public class ControlCenter {
 	
 	public static void main(String[] args) throws IOException {
 		System.out.println(USAGE);
-		simpleRandomRace(50, 100, 2, 5, 40, 150, 500, 2000, 70, 150);
+		defaultRace();
+		//simpleRandomRace(50, 100, 2, 5, 40, 150, 500, 2000, 70, 150);
 	}
 
 	/*
