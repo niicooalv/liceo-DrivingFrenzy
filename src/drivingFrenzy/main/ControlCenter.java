@@ -8,15 +8,15 @@ import drivingFrenzy.race.StandardIndoorSection;
 import drivingFrenzy.race.Track;
 import drivingFrenzy.vehicles.Scooter;
 import drivingFrenzy.vehicles.Vehicle;
-
+/** prueba **/
 /**
  * @author ismael This is the Control Center. It is the entry point of the
  *         application, where the races are created, vehicles are added...
  */
 public class ControlCenter {
 
-	private final static String USAGE = "El programa genera un número aleatorio de vehículos y secciones de pista y realiza la carrera. \n"
-			+ "El programa automáticamente para tras imprimir una línea, esperando a que el usuario pulse enter para continuar.";
+	private final static String USAGE = "El programa genera un nï¿½mero aleatorio de vehï¿½culos y secciones de pista y realiza la carrera. \n"
+			+ "El programa automï¿½ticamente para tras imprimir una lï¿½nea, esperando a que el usuario pulse enter para continuar.";
 
 	/**
 	 * @param minSections
@@ -62,7 +62,7 @@ public class ControlCenter {
 		Vehicle[] vehicles = new Vehicle[numberOfVehicles];
 		
 		for (int i = 0; i < numberOfVehicles; i++) {
-			vehicles[i] = new Scooter(i, "un conductor anónimo", 0, random.nextInt(minVehicleSpeed, maxVehicleSpeed),
+			vehicles[i] = new Scooter(i, "un conductor anï¿½nimo", 0, random.nextInt(minVehicleSpeed, maxVehicleSpeed),
 					"scooter");
 		}
 		
@@ -82,13 +82,13 @@ public class ControlCenter {
 		// NOW WE START THE RACE!!!! We have to get the times for each vehicle per
 		// section, and then the total time.
 		nextComment(
-				"Bienvenidos a la carrera simple en línea recta indoor. Hoy tenemos algunas scooters tratando de realizar el trayecto lo más rápido posible!");
-		nextComment("Comencemos con alguna información sobre la pista:");
+				"Bienvenidos a la carrera simple en lï¿½nea recta indoor. Hoy tenemos algunas scooters tratando de realizar el trayecto lo mï¿½s rï¿½pido posible!");
+		nextComment("Comencemos con alguna informaciï¿½n sobre la pista:");
 		nextComment(track.getDescription());
 		nextComment("Tenemos hoy " + vehicles.length + " competidores: ");
 		for (Vehicle vehicle : vehicles) {
-			nextComment("Con el número " + vehicle.getNumber() + " tenemos un " + vehicle.getDescription()
-					+ " pilotado por " + vehicle.getDriver() + ". Este vehículo alcanza una velocidad máxima de "
+			nextComment("Con el nï¿½mero " + vehicle.getNumber() + " tenemos un " + vehicle.getDescription()
+					+ " pilotado por " + vehicle.getDriver() + ". Este vehï¿½culo alcanza una velocidad mï¿½xima de "
 					+ vehicle.getMaxSpeed() + " km/h");
 		}
 		nextComment("Comienza la carrera!");
@@ -98,18 +98,18 @@ public class ControlCenter {
 			// for each vehicle, we want to track its total time.
 			int currentSectionPosition = 1;
 			double totalTime = 0;
-			nextComment("El siguiente piloto es " + vehicle.getDriver() + " con el número " + vehicle.getNumber()
+			nextComment("El siguiente piloto es " + vehicle.getDriver() + " con el nï¿½mero " + vehicle.getNumber()
 					+ ". Se prepara para salir!");
 			for (Section section : track.getSections()) {
-				nextComment("\tEl siguiente tramo es el número " + currentSectionPosition + ", "
+				nextComment("\tEl siguiente tramo es el nï¿½mero " + currentSectionPosition + ", "
 						+ section.getDescription() + " de " + section.getLength()
-						+ " metros de longitud, con una velocidad máxima permitida de "
+						+ " metros de longitud, con una velocidad mï¿½xima permitida de "
 						+ section.getTheoreticalMaxSpeed() + "km/h");
 				// The driver modifies the speed based on the section about to enter
 				String action = vehicle.adaptSpeed(section);
 				double secondsThisSection = section.getLength() / (vehicle.getCurrentSpeed()*1d/1000*3600); 
 				nextComment("\t" + action);
-				nextComment("\tPasa la sección en " + secondsThisSection + " segundos." );
+				nextComment("\tPasa la secciï¿½n en " + secondsThisSection + " segundos." );
 				totalTime += secondsThisSection;
 				nextComment("\tSu tiempo total tras el tramo " + currentSectionPosition + " es de " + timeTo2Decimals(totalTime) + " segundos");
 				currentSectionPosition++;
@@ -122,7 +122,7 @@ public class ControlCenter {
 		nextComment("Y acaba la carrera! Los tiempos de los pilotos son: ");
 		for (int i=0; i<vehicles.length;i++) {
 			Vehicle vehicle = vehicles[i];
-			nextComment("\t" + vehicle.getDriver() + " con el número " + vehicle.getNumber() + " ha hecho un tiempo de " + timeTo2Decimals(times[i]) + " segundos.");
+			nextComment("\t" + vehicle.getDriver() + " con el nï¿½mero " + vehicle.getNumber() + " ha hecho un tiempo de " + timeTo2Decimals(times[i]) + " segundos.");
 		}
 		
 	}
